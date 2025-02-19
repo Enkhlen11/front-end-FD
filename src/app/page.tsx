@@ -1,5 +1,12 @@
-import Image from "next/image";
+import { CloudinaryUpload } from "@/components/CloudinaryUpload";
+
 
 export default function Home() {
-  return <div></div>;
+  return (
+    <div>
+      hello world
+      <CloudinaryUpload />
+      
+    </div>
+  );
 }
