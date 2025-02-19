@@ -3,8 +3,9 @@
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
+import { Checkbox } from "@/components/ui/checkbox";
 
-export default function Login() {
+export default function CreatePassword() {
   return (
     <div className=" flex justify-center items-center h-screen m-[auto] gap-[106px]">
       <div className="w-[416px] h-[376px] flex flex-col gap-5">
@@ -12,23 +13,28 @@ export default function Login() {
           <ChevronLeft className="text-[black]" />
         </Button>
         <div className="gap-1">
-          <h3 className="text-[24px] text-[#09090B] font-semibold">Log in</h3>
+          <h3 className="text-[24px] text-[#09090B] font-semibold">
+            Create a strong password
+          </h3>
           <p className="text-[16px] text-[#71717A]">
-            Log in to enjoy your favorite dishes.
+            Create a strong password with letters, numbers.
           </p>
         </div>
         <div className="flex flex-col gap-4">
           <input
             type="text"
-            placeholder="Enter your email address"
+            placeholder="Password"
             className=" border-[1px] rounded-md py-2 px-[12px]"
           />
           <input
             type="text"
-            placeholder="Password"
+            placeholder="Confirm"
             className=" border-[1px] rounded-md py-2 px-[12px]"
           />
-          <p>Forget password ?</p>
+          <div className="flex gap-[8px]">
+            <Checkbox />
+            <p className="text-[#71717A]">Show password</p>
+          </div>
         </div>
         <div className="flex flex-col gap-5">
           <Button
@@ -39,8 +45,8 @@ export default function Login() {
           </Button>
         </div>
         <div className="flex gap-3 justify-center">
-          <p className="text-[16px] text-[#71717A]">Don't have an account?</p>
-          <p className="text-[#2563EB]">Sign up</p>
+          <p className="text-[16px] text-[#71717A]">Already have an account?</p>
+          <p className="text-[#2563EB]">Log in</p>
         </div>
       </div>
       <div>
