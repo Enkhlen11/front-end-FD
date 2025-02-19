@@ -1,12 +1,9 @@
-import { CloudinaryUpload } from "@/components/CloudinaryUpload";
+"use client";
 
+import { CloudinaryUpload } from "@/components/CloudinaryUpload";
+import { useState } from "react";
 
 export default function Home() {
-  return (
-    <div>
-      hello world
-      <CloudinaryUpload />
-      
-    </div>
-  );
+  const [currentSlide, setcurrentSlide] = useState(0);
+  return <div></div>;
 }
