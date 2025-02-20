@@ -17,7 +17,7 @@ export default function CreatePassword({
   return (
     <div className=" flex justify-center items-center h-screen m-[auto] gap-[106px]">
       <div className="w-[416px] h-[376px] flex flex-col gap-5">
-        <Button variant="outline" size="icon">
+        <Button variant="outline" size="icon" onClick={handlePrev}>
           <ChevronLeft className="text-[black]" />
         </Button>
         <div className="gap-1">

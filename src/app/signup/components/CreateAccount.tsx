@@ -35,6 +35,7 @@ export default function CreateAccount({
         />
 
         <Button
+          onClick={handleNext}
           variant="outline"
           className="w-[416px] bg-[#71717A] text-[#FAFAFA]"
         >

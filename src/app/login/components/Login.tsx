@@ -43,13 +43,13 @@ export default function Login() {
           <p className="text-[#2563EB]">Sign up</p>
         </div>
       </div>
-      <div>
-        <img
-          src="https://res.cloudinary.com/dpy6izfnd/image/upload/v1739930229/delivery_ajw2s0.jpg"
-          height="1000"
-          width="1000"
+      <div className="w-full h-screen">
+        <Image
+          src="https://res.cloudinary.com/da2ltmfaf/image/upload/v1739929534/frame_h8teog.png"
+          height={1000}
+          width={1000}
           alt="Pizza boy with motorcycle"
-          className="rounded-2xl w-[1000px] h-[1000px] object-cover"
+          className="w-full"
         />
       </div>
     </div>
