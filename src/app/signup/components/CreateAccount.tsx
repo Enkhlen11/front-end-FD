@@ -40,6 +40,7 @@ export default function CreateAccount({
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     alert("zuv ajillaa");
+    handleNext();
   }
 
   return (

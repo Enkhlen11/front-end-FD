@@ -20,14 +20,29 @@ import { Input } from "@/components/ui/input";
 
 const formSchema = z
   .object({
-    password: z.string(),
+    password: z
+      .string()
+      .min(8, { message: "Password must be at least 8 characters long." })
+      .refine((password) => /[A-Z]/.test(password), {
+        message: "Password must include at least one uppercase letter.",
+      })
+      .refine((password) => /[a-z]/.test(password), {
+        message: "Password must include at least one lowercase letter.",
+      })
+      .refine((password) => /[0-9]/.test(password), {
+        message: "Password must include at least one number.",
+      }),
     confirm: z.string(),
   })
   .refine((data) => data.password === data.confirm, {
     message: "Passwords don't match",
     path: ["confirm"], // path of error
   });
+
 // formSchema.parse({ password: "asdf", confirm: "qwer" });
+// const formSchema = z.object({
+//   username: z.string().min(2).max(50),
+// })
 
 export default function CreatePassword({
   handleNext,
@@ -50,6 +65,7 @@ export default function CreatePassword({
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
+    alert("zuv ajillaa");
   }
 
   return (
@@ -95,11 +111,12 @@ export default function CreatePassword({
                   </FormItem>
                 )}
               />
-              <div className="flex gap-[8px]">
+              <div className="flex gap-[8px] items-center">
                 <Checkbox />
                 <p className="text-[#71717A]">Show password</p>
               </div>
               <Button
+                type="submit"
                 variant="outline"
                 className="w-[416px] bg-[#71717A] text-[#FAFAFA]"
               >
